@@ -1,9 +1,9 @@
 resource "openstack_networking_network_v2" "vm_net" {
-    name = "tfc_net"
+    name = "no_code-net"
     admin_state_up = true
 }
 resource "openstack_networking_subnet_v2" "vm_subnet" {
-    name = "tfc_subnet"
+    name = "no_code-subnet"
     network_id = openstack_networking_network_v2.vm_net.id
     cidr = "10.0.100.0/24"
     ip_version = 4
