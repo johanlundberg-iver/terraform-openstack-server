@@ -6,3 +6,6 @@ variable "os_password" {
     description = "Password for openstack connection"
     sensitive = true
 }
+variable "network_cidr" {
+    description = "CIDR notation of the network that will be created (10.0.0.0/24)"
+}
