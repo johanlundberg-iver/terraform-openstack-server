@@ -5,7 +5,7 @@ resource "openstack_networking_network_v2" "vm_net" {
 resource "openstack_networking_subnet_v2" "vm_subnet" {
     name = "no_code-subnet"
     network_id = openstack_networking_network_v2.vm_net.id
-    cidr = "10.0.100.0/24"
+    cidr = var.network_cidr
     ip_version = 4
 }
 
