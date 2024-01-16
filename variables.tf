@@ -4,4 +4,5 @@ variable "server_name" {
 }
 variable "os_password" {
     description = "Password for openstack connection"
+    sensitive = true
 }
